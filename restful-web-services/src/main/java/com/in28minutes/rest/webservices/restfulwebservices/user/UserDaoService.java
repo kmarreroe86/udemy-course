@@ -2,6 +2,7 @@ package com.in28minutes.rest.webservices.restfulwebservices.user;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
@@ -33,6 +34,23 @@ public class UserDaoService {
 		}
 		users.add(user);
 		return user;
+	}
+	
+	public User deleteById(int id) {
+		Iterator<User> iter = users.iterator();
+		
+		while(iter.hasNext()) {
+			User u = iter.next();
+			if(u.getId() == id) {
+				iter.remove();
+				return u;
+			}
+		}
+		return null;
+	}
+	
+	public boolean deleteById2(int id) {
+		return users.removeIf(u -> u.getId() == id);		
 	}
 
 }

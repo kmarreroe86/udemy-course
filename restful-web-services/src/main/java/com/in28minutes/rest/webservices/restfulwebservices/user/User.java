@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
@@ -21,7 +22,8 @@ public class User {
 	@GeneratedValue
 	private Integer id;
 
-	@Size(min = 2, message = "Name should have at least 2 characters")
+	@Size(min = 2, message = "Name should have at least 2 characters", max = 10)
+	@NotBlank(message = "name should be not blank")
 	private String name;
 
 	@Past

@@ -37,23 +37,26 @@
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency> -->
 		<dependency>
+			<!-- http://localhost:8080/actuator -->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<dependency>
+			<!-- http://localhost:8080 -->
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-rest-hal-browser</artifactId>
 		</dependency>
-		<dependency>
+
+		<!-- Return in xml format -->
+		<!--<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-xml</artifactId>
-		</dependency>
+		</dependency>-->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
-			
 		</dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>
@@ -66,6 +69,8 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<!-- https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/learn/lecture/8005656#overview -->
+			<!-- http://localhost:8080/swagger-ui.html -->
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
 			<version>2.6.1</version>

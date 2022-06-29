@@ -10,6 +10,10 @@ import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
+
+/*
+https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/learn/lecture/8005694#overview
+*/
 @SpringBootApplication
 public class RestfulWebServicesApplication {
 

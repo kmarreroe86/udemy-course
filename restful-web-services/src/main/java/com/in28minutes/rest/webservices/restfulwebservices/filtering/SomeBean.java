@@ -10,14 +10,17 @@ public class SomeBean {
 
 	private String field2;
 
-	@JsonIgnore
-	private String securedField3;
+	private String field3;
+
+//	@JsonIgnore
+//	private String securedField3;
 
 	public SomeBean(String value1, String value2, String value3) {
 		super();
 		this.field1 = value1;
 		this.field2 = value2;
-		this.securedField3 = value3;
+		this.field3 = value3;
+//		this.securedField3 = value3;
 	}
 
 	public String getField1() {
@@ -36,12 +39,20 @@ public class SomeBean {
 		this.field2 = value2;
 	}
 
-	public String getSecuredField3() {
-		return securedField3;
+	public String getField3() {
+		return field3;
 	}
 
-	public void setSecuredField3(String securedField3) {
-		this.securedField3 = securedField3;
+	public void setField3(String field3) {
+		this.field3 = field3;
 	}
+
+//	public String getSecuredField3() {
+//		return securedField3;
+//	}
+
+//	public void setSecuredField3(String securedField3) {
+//		this.securedField3 = securedField3;
+//	}
 
 }
